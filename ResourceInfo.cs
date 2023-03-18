@@ -25,6 +25,7 @@ namespace Project
         {
             Resouce resos = new Resouce();
             resos.ShowDialog();
+            MessageBox.Show("Hee");
 
 
             if (resos.DialogResult == DialogResult.OK)

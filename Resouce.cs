@@ -8,7 +8,7 @@ namespace Project
             InitializeComponent();
         }
 
-        private void Addbuton1 (object sender, EventArgs e)
+        private void Addbutton1(object sender, EventArgs e)
         {
             string name = tbName.Text;
             string category = tbCate.Text;
