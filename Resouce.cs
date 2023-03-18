@@ -22,6 +22,7 @@ namespace Project
                 Number = Number,
 
             };
+
             this.DialogResult = DialogResult.OK;
 
         }
