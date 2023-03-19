@@ -40,5 +40,38 @@ namespace Project
             }
 
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using 
+            //string savedata = this.dataGridView1.ToString();
+            //File.WriteAllText("d:/All_Product.CSV", savedata);
+            SaveFileDialog saveFile= new SaveFileDialog();
+            saveFile.FileName = "All Product";
+            saveFile.Filter = "Json|*.json";
+            saveFile.ShowDialog();
+
+
+            if(saveFile.FileName != "")
+            {
+                string json = JsonConvert.SerializeObject(listProduct, Formatting.Indented);
+                File.WriteAllText(saveFile.FileName, json);
+                //File.WriteAllText("d:\\All_Product.CSV",dataGridView1.ToString());
+            }
+        }
+
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openfile = new OpenFileDialog();
+            openfile.FileName = "All Resouce";
+            openfile.Filter = "CSV|*.csv";
+            openfile.ShowDialog();
+            if (openfile.FileName != "")
+            {
+                File.ReadAllLines(openfile.FileName);
+                RefreshDataG();
+            }
+        }
     }
 }
