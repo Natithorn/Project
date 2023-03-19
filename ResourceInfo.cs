@@ -25,14 +25,10 @@ namespace Project
         {
             Resouce resos = new Resouce();
             resos.ShowDialog();
-            MessageBox.Show("Hee");
-
-
             if (resos.DialogResult == DialogResult.OK)
             {
                 listProduct.Add(resos.getProduct());
                 RefreshDataG();
-
             }
         }
         private void RefreshDataG()
@@ -41,8 +37,6 @@ namespace Project
             foreach (Product product_ in listProduct)
             {
                 dataGridView1.Rows.Add(product_.name, product_.category, product_.Number);
-
-
             }
 
         }

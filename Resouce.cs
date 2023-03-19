@@ -8,7 +8,12 @@ namespace Project
             InitializeComponent();
         }
 
-        private void Addbutton1(object sender, EventArgs e)
+        public Product getProduct()
+        {
+            return products;
+        }
+
+        private void Addbutton_Click(object sender, EventArgs e)
         {
             string name = tbName.Text;
             string category = tbCate.Text;
@@ -22,18 +27,7 @@ namespace Project
                 Number = Number,
 
             };
-
             this.DialogResult = DialogResult.OK;
-
         }
-
-        public Product getProduct()
-        {
-            return products;
-        }
-
-
-
-
     }
 }

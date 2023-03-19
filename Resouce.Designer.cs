@@ -28,89 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbName = new System.Windows.Forms.TextBox();
-            this.tbCate = new System.Windows.Forms.TextBox();
-            this.tbNumber = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Addbutton = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            tbName = new TextBox();
+            tbCate = new TextBox();
+            tbNumber = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            Addbutton = new Button();
+            SuspendLayout();
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(100, 63);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(125, 27);
-            this.tbName.TabIndex = 0;
+            tbName.Location = new Point(88, 47);
+            tbName.Margin = new Padding(3, 2, 3, 2);
+            tbName.Name = "tbName";
+            tbName.Size = new Size(110, 23);
+            tbName.TabIndex = 0;
             // 
             // tbCate
             // 
-            this.tbCate.Location = new System.Drawing.Point(100, 110);
-            this.tbCate.Name = "tbCate";
-            this.tbCate.Size = new System.Drawing.Size(125, 27);
-            this.tbCate.TabIndex = 1;
+            tbCate.Location = new Point(88, 82);
+            tbCate.Margin = new Padding(3, 2, 3, 2);
+            tbCate.Name = "tbCate";
+            tbCate.Size = new Size(110, 23);
+            tbCate.TabIndex = 1;
             // 
             // tbNumber
             // 
-            this.tbNumber.Location = new System.Drawing.Point(100, 161);
-            this.tbNumber.Name = "tbNumber";
-            this.tbNumber.Size = new System.Drawing.Size(125, 27);
-            this.tbNumber.TabIndex = 2;
+            tbNumber.Location = new Point(88, 121);
+            tbNumber.Margin = new Padding(3, 2, 3, 2);
+            tbNumber.Name = "tbNumber";
+            tbNumber.Size = new Size(110, 23);
+            tbNumber.TabIndex = 2;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ชื่อสินค้า";
+            label1.AutoSize = true;
+            label1.Location = new Point(22, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(45, 15);
+            label1.TabIndex = 3;
+            label1.Text = "ชื่อสินค้า";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "หมวดหมู่";
+            label2.AutoSize = true;
+            label2.Location = new Point(22, 85);
+            label2.Name = "label2";
+            label2.Size = new Size(47, 15);
+            label2.TabIndex = 4;
+            label2.Text = "หมวดหมู่";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "จำนวนสินค้า";
+            label3.AutoSize = true;
+            label3.Location = new Point(10, 123);
+            label3.Name = "label3";
+            label3.Size = new Size(62, 15);
+            label3.TabIndex = 5;
+            label3.Text = "จำนวนสินค้า";
             // 
             // Addbutton
             // 
-            this.Addbutton.Location = new System.Drawing.Point(70, 209);
-            this.Addbutton.Name = "Addbutton";
-            this.Addbutton.Size = new System.Drawing.Size(94, 29);
-            this.Addbutton.TabIndex = 6;
-            this.Addbutton.Text = "Add";
-            this.Addbutton.UseVisualStyleBackColor = true;
+            Addbutton.Location = new Point(61, 157);
+            Addbutton.Margin = new Padding(3, 2, 3, 2);
+            Addbutton.Name = "Addbutton";
+            Addbutton.Size = new Size(82, 22);
+            Addbutton.TabIndex = 6;
+            Addbutton.Text = "Add";
+            Addbutton.UseVisualStyleBackColor = true;
+            Addbutton.Click += Addbutton_Click;
             // 
-            // Form1
+            // Resouce
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 309);
-            this.Controls.Add(this.Addbutton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbNumber);
-            this.Controls.Add(this.tbCate);
-            this.Controls.Add(this.tbName);
-            this.Name = "Form1";
-            this.Text = "Resouce";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(233, 232);
+            Controls.Add(Addbutton);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(tbNumber);
+            Controls.Add(tbCate);
+            Controls.Add(tbName);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "Resouce";
+            Text = "Resouce";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
