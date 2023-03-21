@@ -19,14 +19,12 @@ namespace Project
             string category = tbCate.Text;
             int Number = int.Parse(tbNumber.Text);
 
+            Product newproduct = new Product();
+            newproduct.setName(name);
+            newproduct.setCate(category);
+            newproduct.setNumber(Number);
+            products = newproduct;
 
-            products = new Product()
-            {
-                name = name,
-                category = category,
-                Number = Number,
-
-            };
             this.DialogResult = DialogResult.OK;
         }
     }

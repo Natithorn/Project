@@ -8,8 +8,37 @@ namespace Project
 {
     public class Product
     {
-        public string name { get; set; }
-        public string category { get; set; }
-        public int Number { get; set; }
-    }
+        private string name { get; set; }
+        private string category { get; set; }
+        private int Number { get; set; }
+
+        public string GetName()
+        {
+            return name;
+        }
+        public string GetCategory()
+        {
+            return category;
+        }
+        public int GetNumber()
+        {
+            return Number;
+        }
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+        public void setCate(string cate)
+        {
+            this.category= cate;
+        }
+        public void setNumber(int number)
+        {
+            this.Number = number;
+        }
+
+    }   
+    
+
+    
 }

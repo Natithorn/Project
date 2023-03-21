@@ -37,9 +37,8 @@ namespace Project
             dataGridView1.Rows.Clear();
             foreach (Product product_ in listProduct)
             {
-                dataGridView1.Rows.Add(product_.name, product_.category, product_.Number);
+                dataGridView1.Rows.Add(product_.GetName(), product_.GetCategory(), product_.GetNumber());
             }
-
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,7 +55,7 @@ namespace Project
                     file.WriteLine("ProductName,Catagory,Amount");
                     foreach (Product item in listProduct)
                     {
-                        file.WriteLine($"{item.name},{item.category},{item.Number}");
+                        file.WriteLine($"{item.GetName()},{item.GetCategory()},{item.GetNumber()}");
                     }
                 }
             }
@@ -87,12 +86,11 @@ namespace Project
                         else
                         {
                             string[] data = line.Split(',');
-                            listProduct.Add(new Product()
-                            {
-                                name = data[0],
-                                category = data[1],
-                                Number = int.Parse(data[2])
-                            });
+                            Product newproducts = new Product();
+                            newproducts.setName(data[0]);
+                            newproducts.setCate(data[1]);
+                            newproducts.setNumber(int.Parse(data[2]));
+                            listProduct.Add(newproducts);
                             RefreshDataG();
                         }
                     }
@@ -105,18 +103,19 @@ namespace Project
             StorageNumber.Clear();
             foreach (Product i in listProduct)
             {
-                StorageNumber.Add(i.Number);
+                StorageNumber.Add(i.GetNumber());
             }
             StorageNumber.Sort();
             MessageBox.Show(StorageNumber.Last().ToString());
         }
+
 
         private void MinAmount_Click(object sender, EventArgs e)
         {
             StorageNumber.Clear();
             foreach (Product i in listProduct)
             {
-                StorageNumber.Add(i.Number);
+                StorageNumber.Add(i.GetNumber());
             }
             StorageNumber.Sort();
             MessageBox.Show(StorageNumber.First().ToString());
