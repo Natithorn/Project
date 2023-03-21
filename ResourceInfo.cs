@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,9 +44,9 @@ namespace Project
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using 
-            //string savedata = this.dataGridView1.ToString();
-            //File.WriteAllText("d:/All_Product.CSV", savedata);
+           
+            string savedata = this.dataGridView1.ToString();
+            File.WriteAllText("d:/All_Product.CSV", savedata);
             SaveFileDialog saveFile= new SaveFileDialog();
             saveFile.FileName = "All Product";
             saveFile.Filter = "Json|*.json";
@@ -54,9 +55,7 @@ namespace Project
 
             if(saveFile.FileName != "")
             {
-                string json = JsonConvert.SerializeObject(listProduct, Formatting.Indented);
-                File.WriteAllText(saveFile.FileName, json);
-                //File.WriteAllText("d:\\All_Product.CSV",dataGridView1.ToString());
+                File.WriteAllText("d:\\All_Product.CSV",dataGridView1.ToString());
             }
         }
 
