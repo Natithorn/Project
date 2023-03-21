@@ -120,5 +120,41 @@ namespace Project
             StorageNumber.Sort();
             MessageBox.Show(StorageNumber.First().ToString());
         }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openfile = new OpenFileDialog();
+            openfile.FileName = "All Resouce";
+            openfile.Filter = "CSV|*.csv";
+            openfile.ShowDialog();
+            if (openfile.FileName != "")
+            {
+                listProduct.Clear();
+                dataGridView1.Rows.Clear();
+                using (StreamReader file = new StreamReader(openfile.FileName))
+                {
+                    string line;
+                    int count = 0;
+                    while ((line = file.ReadLine()) != null)
+                    {
+                        if (count == 0)
+                        {
+                            count++;
+                            continue;
+                        }
+                        else
+                        {
+                            string[] data = line.Split(',');
+                            Product newproducts = new Product();
+                            newproducts.setName(data[0]);
+                            newproducts.setCate(data[1]);
+                            newproducts.setNumber(int.Parse(data[2]));
+                            listProduct.Add(newproducts);
+                            RefreshDataG();
+                        }
+                    }
+                }
+            }
+        }
     }
 }
