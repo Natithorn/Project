@@ -15,7 +15,7 @@ namespace Project
     {
         public static ResourceInfo Instance;
         public List<Product> listProduct = new List<Product>();
-
+        public List<int> StorageNumber = new List<int>();
         public ResourceInfo()
         {
             InitializeComponent();
@@ -44,18 +44,21 @@ namespace Project
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-            string savedata = this.dataGridView1.ToString();
-            File.WriteAllText("d:/All_Product.CSV", savedata);
-            SaveFileDialog saveFile= new SaveFileDialog();
+            SaveFileDialog saveFile = new SaveFileDialog();
             saveFile.FileName = "All Product";
-            saveFile.Filter = "Json|*.json";
+            saveFile.Filter = "CSV|*.csv";
             saveFile.ShowDialog();
 
-
-            if(saveFile.FileName != "")
+            if (saveFile.FileName != "")
             {
-                File.WriteAllText("d:\\All_Product.CSV",dataGridView1.ToString());
+                using (StreamWriter file = new StreamWriter(saveFile.FileName))
+                {
+                    file.WriteLine("ProductName,Catagory,Amount");
+                    foreach (Product item in listProduct)
+                    {
+                        file.WriteLine($"{item.name},{item.category},{item.Number}");
+                    }
+                }
             }
         }
 
@@ -68,9 +71,55 @@ namespace Project
             openfile.ShowDialog();
             if (openfile.FileName != "")
             {
-                File.ReadAllLines(openfile.FileName);
-                RefreshDataG();
+                listProduct.Clear();
+                dataGridView1.Rows.Clear();
+                using (StreamReader file = new StreamReader(openfile.FileName))
+                {
+                    string line;
+                    int count = 0;
+                    while ((line = file.ReadLine()) != null)
+                    {
+                        if (count == 0)
+                        {
+                            count++;
+                            continue;
+                        }
+                        else
+                        {
+                            string[] data = line.Split(',');
+                            listProduct.Add(new Product()
+                            {
+                                name = data[0],
+                                category = data[1],
+                                Number = int.Parse(data[2])
+                            });
+                            RefreshDataG();
+                        }
+                    }
+                }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StorageNumber.Clear();
+            foreach (Product i in listProduct)
+            {
+                StorageNumber.Add(i.Number);
+            }
+            StorageNumber.Sort();
+            MessageBox.Show(StorageNumber.Last().ToString());
+        }
+
+        private void MinAmount_Click(object sender, EventArgs e)
+        {
+            StorageNumber.Clear();
+            foreach (Product i in listProduct)
+            {
+                StorageNumber.Add(i.Number);
+            }
+            StorageNumber.Sort();
+            MessageBox.Show(StorageNumber.First().ToString());
         }
     }
 }

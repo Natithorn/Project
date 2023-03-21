@@ -39,6 +39,8 @@
             this.newItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newItemToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MaxAmount = new System.Windows.Forms.Button();
+            this.MinAmount = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +53,7 @@
             this.หมวดหมู่,
             this.จำนวน});
             this.dataGridView1.Location = new System.Drawing.Point(65, 54);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
@@ -137,15 +139,37 @@
             this.loadToolStripMenuItem.Size = new System.Drawing.Size(190, 34);
             this.loadToolStripMenuItem.Text = "Load";
             // 
+            // MaxAmount
+            // 
+            this.MaxAmount.Location = new System.Drawing.Point(568, 151);
+            this.MaxAmount.Name = "MaxAmount";
+            this.MaxAmount.Size = new System.Drawing.Size(190, 61);
+            this.MaxAmount.TabIndex = 2;
+            this.MaxAmount.Text = "Max Amount";
+            this.MaxAmount.UseVisualStyleBackColor = true;
+            this.MaxAmount.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // MinAmount
+            // 
+            this.MinAmount.Location = new System.Drawing.Point(568, 252);
+            this.MinAmount.Name = "MinAmount";
+            this.MinAmount.Size = new System.Drawing.Size(190, 68);
+            this.MinAmount.TabIndex = 3;
+            this.MinAmount.Text = "Min Amount";
+            this.MinAmount.UseVisualStyleBackColor = true;
+            this.MinAmount.Click += new System.EventHandler(this.MinAmount_Click);
+            // 
             // ResourceInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1256, 671);
+            this.Controls.Add(this.MinAmount);
+            this.Controls.Add(this.MaxAmount);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ResourceInfo";
             this.Text = "ResourceInfo";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -169,5 +193,7 @@
         private ToolStripMenuItem newItemToolStripMenuItem;
         private ToolStripMenuItem newItemToolStripMenuItem1;
         private ToolStripMenuItem loadToolStripMenuItem;
+        private Button MaxAmount;
+        private Button MinAmount;
     }
 }
