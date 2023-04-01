@@ -52,12 +52,11 @@
             this.ชื่อสินค้า,
             this.หมวดหมู่,
             this.จำนวน});
-            this.dataGridView1.Location = new System.Drawing.Point(65, 54);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(52, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(431, 478);
+            this.dataGridView1.Size = new System.Drawing.Size(429, 382);
             this.dataGridView1.TabIndex = 0;
             // 
             // ชื่อสินค้า
@@ -89,8 +88,7 @@
             this.newItemToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1256, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1005, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -100,20 +98,20 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -123,28 +121,29 @@
             this.newItemToolStripMenuItem1,
             this.loadToolStripMenuItem});
             this.newItemToolStripMenuItem.Name = "newItemToolStripMenuItem";
-            this.newItemToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
+            this.newItemToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.newItemToolStripMenuItem.Text = "Item";
             // 
             // newItemToolStripMenuItem1
             // 
             this.newItemToolStripMenuItem1.Name = "newItemToolStripMenuItem1";
-            this.newItemToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.newItemToolStripMenuItem1.Size = new System.Drawing.Size(156, 26);
             this.newItemToolStripMenuItem1.Text = "New Item";
             this.newItemToolStripMenuItem1.Click += new System.EventHandler(this.newItemToolStripMenuItem1_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // MaxAmount
             // 
-            this.MaxAmount.Location = new System.Drawing.Point(568, 151);
+            this.MaxAmount.Location = new System.Drawing.Point(587, 120);
+            this.MaxAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaxAmount.Name = "MaxAmount";
-            this.MaxAmount.Size = new System.Drawing.Size(190, 61);
+            this.MaxAmount.Size = new System.Drawing.Size(152, 49);
             this.MaxAmount.TabIndex = 2;
             this.MaxAmount.Text = "Max Amount";
             this.MaxAmount.UseVisualStyleBackColor = true;
@@ -152,9 +151,10 @@
             // 
             // MinAmount
             // 
-            this.MinAmount.Location = new System.Drawing.Point(568, 252);
+            this.MinAmount.Location = new System.Drawing.Point(587, 200);
+            this.MinAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinAmount.Name = "MinAmount";
-            this.MinAmount.Size = new System.Drawing.Size(190, 68);
+            this.MinAmount.Size = new System.Drawing.Size(152, 54);
             this.MinAmount.TabIndex = 3;
             this.MinAmount.Text = "Min Amount";
             this.MinAmount.UseVisualStyleBackColor = true;
@@ -162,15 +162,14 @@
             // 
             // ResourceInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1256, 671);
+            this.ClientSize = new System.Drawing.Size(1005, 537);
             this.Controls.Add(this.MinAmount);
             this.Controls.Add(this.MaxAmount);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ResourceInfo";
             this.Text = "ResourceInfo";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
