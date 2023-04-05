@@ -19,14 +19,10 @@ ResourceInfo --|> Resource
 Resource --|> ResourceInfo
 ClassProdouct --> Resource
 ClassProdouct : str name
-ClassProdouct --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
+ClassProdouct : str category
+ClassProdouct : int Number
+ClassProdouct --|> ResourceInfo
 ResourceInfo : str DataGirds
-class Class10 {
-  <<service>>
-  int id
-  size()
-}
+
 ```
 
