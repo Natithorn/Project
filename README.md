@@ -17,6 +17,7 @@ classDiagram
 ResourceInfo --|> Resource 
 <<Interface>> ResourceInfo
 Resource --|> ResourceInfo
+note for Resource "Add Product" 
 ClassProdouct --> Resource
 ClassProdouct : str name
 ClassProdouct : str category
