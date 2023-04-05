@@ -23,7 +23,7 @@ ClassProdouct : str name
 ClassProdouct : str category
 ClassProdouct : int Number
 ClassProdouct --|> ResourceInfo
-ResourceInfo : str DataGirds
+ResourceInfo : DataGirds()
 ResourceInfo : +NewItem()
 
 ```
