@@ -16,9 +16,10 @@ e-mail : natithorn.s@kkumail.com
 classDiagram
 ResourceInfo --|> Resource 
 <<Interface>> ResourceInfo
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
+Resource --|> ResourceInfo
+ClassProdouct --> Resource
+ClassProdouct : str name
+ClassProdouct --|> Class07
 Class07 : equals()
 Class07 : Object[] elementData
 ResourceInfo : str DataGirds
