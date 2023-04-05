@@ -14,16 +14,14 @@ e-mail : natithorn.s@kkumail.com
 
 ```mermaid
 classDiagram
-Inwza <|-- Resource : Cool
-<<Interface>> Inwza
+ResourceInfo --|> Resource 
+<<Interface>> ResourceInfo
 Class09 --> C2 : Where am i?
 Class09 --* C3
 Class09 --|> Class07
 Class07 : equals()
 Class07 : Object[] elementData
-Inwza : size()
-Inwza : int chimp
-Inwza : int gorilla
+ResourceInfo : str DataGirds
 class Class10 {
   <<service>>
   int id
