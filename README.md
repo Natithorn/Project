@@ -17,15 +17,15 @@ e-mail : natithorn.s@kkumail.com
 classDiagram
 Class01 <|-- AveryLongClass : Cool
 <<Interface>> Class01
+Class01 : int chimp
+Class01 : int gorilla
+Class01 : size()
 Class09 --> C2 : Where am i?
 Class09 --* C3
 Class09 --|> Class07
 Class07 : equals()
 Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-class1 Product {
+Class1 Product {
   <<Class>>
   str name
   str category
