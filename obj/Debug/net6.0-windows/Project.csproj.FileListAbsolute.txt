@@ -54,3 +54,5 @@ C:\Users\Admin\Desktop\work\Lab OOP\Project\obj\Debug\net6.0-windows\refint\Proj
 C:\Users\Admin\Desktop\work\Lab OOP\Project\obj\Debug\net6.0-windows\Project.pdb
 C:\Users\Admin\Desktop\work\Lab OOP\Project\obj\Debug\net6.0-windows\Project.genruntimeconfig.cache
 C:\Users\Admin\Desktop\work\Lab OOP\Project\obj\Debug\net6.0-windows\ref\Project.dll
+D:\Code\C# OOP\Project\Project\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\Code\C# OOP\Project\Project\obj\Debug\net6.0-windows\Project.csproj.CopyComplete
