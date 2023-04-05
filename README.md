@@ -13,20 +13,22 @@ e-mail : natithorn.s@kkumail.com
 ## classDiagram
 ```mermaid
 classDiagram
-Class01 <|-- AveryLongClass : Cool
-<<Interface>> Class01
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-class Class10 {
-  <<service>>
-  int id
-  size()
+
+class1 --|> ResourceInfo
+ResourceInfo : DataGrids
+ResourceInfo : File.Open
+ResourceInfo : File.Save
+ResourceInfo : NewItem
+
+ResourceInfo --|> Resource
+Resource --|> ResourceInfo
+class1 --|> Resource
+Resource : Form add product
+class1 Product {
+  <<Class>>
+  str name
+  str category
+  int Number
 }
 
 ```
