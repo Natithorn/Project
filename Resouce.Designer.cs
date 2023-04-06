@@ -93,12 +93,13 @@
             this.Addbutton.TabIndex = 6;
             this.Addbutton.Text = "Add";
             this.Addbutton.UseVisualStyleBackColor = true;
+            this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click_1);
             // 
             // Resouce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 411);
+            this.ClientSize = new System.Drawing.Size(291, 338);
             this.Controls.Add(this.Addbutton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

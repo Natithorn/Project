@@ -29,5 +29,22 @@ namespace Project
 
             this.DialogResult = DialogResult.OK;
         }
+
+        private void Addbutton_Click_1(object sender, EventArgs e)
+        {
+            string name = tbName.Text;
+            string category = tbCate.Text;
+            int Number = int.Parse(tbNumber.Text);
+
+
+            Product newproduct = new Product();
+            newproduct.setName(name);
+            newproduct.setCate(category);
+            newproduct.setNumber(Number);
+            products = newproduct;
+
+
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

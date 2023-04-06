@@ -88,7 +88,7 @@
             this.newItemToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1005, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(775, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -127,21 +127,21 @@
             // newItemToolStripMenuItem1
             // 
             this.newItemToolStripMenuItem1.Name = "newItemToolStripMenuItem1";
-            this.newItemToolStripMenuItem1.Size = new System.Drawing.Size(156, 26);
+            this.newItemToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.newItemToolStripMenuItem1.Text = "New Item";
             this.newItemToolStripMenuItem1.Click += new System.EventHandler(this.newItemToolStripMenuItem1_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // MaxAmount
             // 
-            this.MaxAmount.Location = new System.Drawing.Point(587, 120);
-            this.MaxAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaxAmount.Location = new System.Drawing.Point(556, 129);
+            this.MaxAmount.Margin = new System.Windows.Forms.Padding(2);
             this.MaxAmount.Name = "MaxAmount";
             this.MaxAmount.Size = new System.Drawing.Size(152, 49);
             this.MaxAmount.TabIndex = 2;
@@ -151,8 +151,8 @@
             // 
             // MinAmount
             // 
-            this.MinAmount.Location = new System.Drawing.Point(587, 200);
-            this.MinAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinAmount.Location = new System.Drawing.Point(556, 237);
+            this.MinAmount.Margin = new System.Windows.Forms.Padding(2);
             this.MinAmount.Name = "MinAmount";
             this.MinAmount.Size = new System.Drawing.Size(152, 54);
             this.MinAmount.TabIndex = 3;
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 537);
+            this.ClientSize = new System.Drawing.Size(775, 537);
             this.Controls.Add(this.MinAmount);
             this.Controls.Add(this.MaxAmount);
             this.Controls.Add(this.dataGridView1);
