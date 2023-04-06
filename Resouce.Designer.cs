@@ -53,7 +53,7 @@
             // 
             // tbNumber
             // 
-            this.tbNumber.Location = new System.Drawing.Point(101, 161);
+            this.tbNumber.Location = new System.Drawing.Point(101, 176);
             this.tbNumber.Name = "tbNumber";
             this.tbNumber.Size = new System.Drawing.Size(125, 27);
             this.tbNumber.TabIndex = 2;
